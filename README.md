@@ -1,6 +1,6 @@
 # Negozio
 
-1 Descrizione del progetto
+## Descrizione del progetto
 Si vuole realizzare un sistema per la gestione di negozi virtuali costituito dalle seguenti entità:
 - ServerM: mantiene la lista dei negozi virtuali e dei prodotti di ogni ne- gozio virtuale. Interagisce con ServerN e ServerC.
 - ServerN: consente ai ClientN di operare sul ServerM. In particolare con- sente di creare un nuovo negozio virtuale, eliminare un negozio virtuale ed aggiungere ed eliminare prodotti da un negozio virtuale.
