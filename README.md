@@ -24,3 +24,42 @@ Il ServerM è il server principale che mantiene la lista dei negozi e dei prodot
 
 ### Lato Client
 Il ClientN, ovvero il nostro negoziante, gestisce i propri negozi e prodotti mentre il ClientC sarebbe l’utente che decide di acquistare prodotti e aggiungerli in un carrello. Si utilizza una comunicazione TCP tra client e server in quanto non è importante la velocità ma più la sicurezza delle informazioni.
+
+## Manuale Utente
+Come primo comando inizializzare la lista di negozi (d'esempio) create dal file InizializzaFile.
+```
+gcc InizializzaFile.c -o Inizializza
+./Inizializza
+```
+Aprire 5 terminali. !!! ESEGUIRE PRIMA I LA COMPILAZIONE E POI L'ESECUZIONE
+### Fase di Inizializzazione
+
+##### Terminale 1
+```
+gcc ServerM.c -o ServerM -lpthread
+./ServerM
+```
+
+##### Terminale 2
+```
+gcc ServerC.c -o ServerC -lpthread
+./ServerC 127.0.0.1
+```
+
+##### Terminale 3
+```
+gcc ServerN.c -o ServerN -lpthread
+./ServerN 127.0.0.1
+```
+
+##### Terminale 4
+```
+gcc ClientC.c -o ClientC -lpthread
+./ServerC 127.0.0.1
+```
+
+##### Terminale 5
+```
+gcc ClientN.c -o ClientN -lpthread
+./ServerN 127.0.0.1
+```
