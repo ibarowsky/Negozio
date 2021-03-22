@@ -16,3 +16,5 @@ Il client e il server si scambiano il pacchetto formato dai seguenti campi:
 - id-neg: chiave che identifica il negozio;
 - nome-neg: stringa in cui si memorizza il nome del negozio; 
 - nome-prod: stringa che memorizza il nome del prodotto.
+<img width="514" alt="ProtocolloApplicazione" src="https://user-images.githubusercontent.com/46711940/112025548-9092cf00-8b35-11eb-94af-d9d15293243c.png">
+
