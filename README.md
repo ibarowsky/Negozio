@@ -18,3 +18,6 @@ Il client e il server si scambiano il pacchetto formato dai seguenti campi:
 - nome-prod: stringa che memorizza il nome del prodotto.
 <img width="514" alt="ProtocolloApplicazione" src="https://user-images.githubusercontent.com/46711940/112025548-9092cf00-8b35-11eb-94af-d9d15293243c.png">
 
+## Dettagli Implementativi
+### Lato Server
+Il ServerM è il server principale che mantiene la lista dei negozi e dei prodotti e comunica solo tramite i due server sottostanti, ovvero il ServerN e il ServerC. Il ServerN si occupa di comunicare con i negozianti che vogliono apportare modifiche ai loro negozi e prodotti. Il ServerC si occupa di interagire con gli utenti che visualizzano la lista dei prodotti e dei negozi. Il server principale è quello che aggiorna le due liste mentre i due server fanno da tramite tra gli utenti e il ServerM. Tra i server si è deciso di utilizzare il protocollo UDP in quanto si vuole che le informazioni arrivino in modo rapido. Poiché i server devono gestire più client si è deciso di utilizzare dei thread, ovvero dei processi che avvengono in parallelo in modo tale da poter comunicare con più utenti contemporaneamente e I/O Multiplexing per gestire al meglio i vari utenti.
